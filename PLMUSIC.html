@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Música</title>
+</head>
+<body>
+    <center>
+        <h1>Player de Música</h1> 
+          <audio id="audioPlayer" controls>
+              <source src="Gravação_1 (1).mp3" type="audio/mp3">
+
+
+          </audio>
+
+            <button onclick="playMusic()">Tocar</button>
+            <button onclick="pauseMusic()">Pausar</button>
+            <button onclick="stopMusic()">Parar</button>
+
+
+    </center>
+
+    <script>
+         var audio = document.getElementById("audioPlayer");
+
+         function playMusic(){
+            audio.play();
+         }
+
+         function pauseMusic(){
+            audio.pause();
+         }
+
+         function stopMusic(){
+            audio.pause();
+            audio.currentTime = 0;
+         }
+    </script>
+</body>
+</html>
